@@ -12,11 +12,16 @@ import os
 import math
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
-import matplotlib
-matplotlib.use('TkAgg')
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
+# Optional matplotlib import for future graph features
+try:
+    import matplotlib
+    matplotlib.use('TkAgg')
+    from matplotlib.figure import Figure
+    from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+    MATPLOTLIB_AVAILABLE = True
+except ImportError:
+    MATPLOTLIB_AVAILABLE = False
 
 # Import from existing modules
 from gym import WorkoutDatabase, WorkoutCalculator
