@@ -1,19 +1,19 @@
-# 🏋️ Gym Workout Planner
+# Gym Workout Planner
 
 An interactive, personalized gym workout planning platform that creates customized training programs based on your age, gender, fitness goals, and training schedule.
 
-## ✨ Features
+## Features
 
-- **🎯 Personalized Workout Plans**: Get customized workout routines tailored to your specific goals
-- **👤 User Profiles**: Save and load your personal information
-- **📊 Progress Tracking**: Log your completed workouts and track your fitness journey
-- **⚙️ Age-Adjusted Intensity**: Automatically adjusts workout intensity based on age
-- **📁 Export Functionality**: Save your workout plan as a text file
-- **🎨 Beautiful Graphical Interface**: Modern GUI with buttons and forms
-- **💾 Data Persistence**: Your profile and progress are automatically saved
-- **🖥️ Two Versions**: Choose between GUI (graphical) or Terminal (command-line) interface
+- **Personalized Workout Plans**: Get customized workout routines tailored to your specific goals
+- **User Profiles**: Save and load your personal information
+- **Progress Tracking**: Log your completed workouts and track your fitness journey
+- **Age-Adjusted Intensity**: Automatically adjusts workout intensity based on age
+- **Export Functionality**: Save your workout plan as a text file
+- **Beautiful Graphical Interface**: Modern GUI with buttons and forms
+- **Data Persistence**: Your profile and progress are automatically saved
+- **Two Versions**: Choose between GUI (graphical) or Terminal (command-line) interface
 
-## 🎯 Workout Goals
+## Workout Goals
 
 Choose from 6 different fitness goals:
 1. **Losing Weight** - Fat-burning focused exercises
@@ -23,7 +23,7 @@ Choose from 6 different fitness goals:
 5. **Stronger ABS** - Core strengthening exercises
 6. **Stronger Shoulders and Arms** - Upper body strength training
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -57,11 +57,11 @@ chmod +x gym_gui.py gym.py
 ./gym.py      # Terminal version
 ```
 
-## 📖 How to Use
+## How to Use
 
-> **📘 For detailed GUI instructions, see [GUI_GUIDE.md](GUI_GUIDE.md)**
+> **For detailed GUI instructions, see [GUI_GUIDE.md](GUI_GUIDE.md)**
 > 
-> **🚀 For quick start, see [QUICKSTART.md](QUICKSTART.md)**
+> **For quick start, see [QUICKSTART.md](QUICKSTART.md)**
 
 ### First Time Setup
 
@@ -108,7 +108,7 @@ chmod +x gym_gui.py gym.py
 - Safely exit the program
 - All data is automatically saved
 
-## 🎨 Workout Plan Details
+## Workout Plan Details
 
 ### Age-Based Adjustments
 
@@ -134,13 +134,13 @@ The program intelligently alternates between:
 
 This ensures balanced training that targets your specific goals while maintaining overall fitness.
 
-## 💾 Data Storage
+## Data Storage
 
 - Profile data is saved in `user_data.json`
 - Automatically loads on program start
 - Exported workout plans saved as `workout_plan_[name]_[timestamp].txt`
 
-## 🏗️ Technical Details
+## Technical Details
 
 ### Architecture
 
@@ -160,7 +160,7 @@ The program is built with a clean, object-oriented architecture:
 - Clean separation of concerns
 - Easy to maintain and extend
 
-## 📋 Example Workout Categories
+## Example Workout Categories
 
 ### 1. Fat Loss Workout
 - Plate thrusters
@@ -203,7 +203,7 @@ The program is built with a clean, object-oriented architecture:
 - Bent over rows
 - And more...
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to fork this project and submit pull requests with improvements!
 
@@ -215,20 +215,20 @@ Feel free to fork this project and submit pull requests with improvements!
 - Create workout reminders
 - Add exercise videos/images
 
-## 📝 Author
+## Author
 
 **Aryan Kumawat**
 
-## 📄 License
+## License
 
 This project is available for personal and educational use.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Thanks to all fitness enthusiasts who inspired this project
 - Built with Python and passion for fitness
 
 ---
 
-**Stay consistent, track your progress, and achieve your fitness goals! 💪**
+**Stay consistent, track your progress, and achieve your fitness goals!**
 

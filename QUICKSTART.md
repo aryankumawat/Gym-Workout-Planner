@@ -1,4 +1,4 @@
-# 🚀 Quick Start Guide
+# Quick Start Guide
 
 ## Run the Program
 
@@ -37,7 +37,7 @@ Enter your choice:
 
 ## Step-by-Step Guide
 
-### 1️⃣ Create Your Profile
+### 1. Create Your Profile
 
 Select option `1` and enter:
 - **Name**: Your full name (e.g., "John Doe")
@@ -52,7 +52,7 @@ Select option `1` and enter:
   6. Stronger Shoulders and Arms
 - **Training Days**: How many days per week (1-7)
 
-### 2️⃣ View Your Workout Plan
+### 2. View Your Workout Plan
 
 Select option `2` to see your personalized weekly workout plan with:
 - Your profile information
@@ -60,21 +60,21 @@ Select option `2` to see your personalized weekly workout plan with:
 - Daily workout routines
 - Exercise details (reps/mins and sets)
 
-### 3️⃣ Export Your Plan
+### 3. Export Your Plan
 
 Select option `3` to save your workout plan as a text file:
 - File is saved as `workout_plan_[YourName]_[timestamp].txt`
 - Can be printed or shared
 - Great for gym reference
 
-### 4️⃣ Track Your Progress
+### 4. Track Your Progress
 
 Select option `4` after completing a workout:
 - Choose which day you completed
 - Add optional notes
 - Build your workout history
 
-### 5️⃣ View Your Progress
+### 5. View Your Progress
 
 Select option `5` to see:
 - Total workouts completed
@@ -93,7 +93,7 @@ Select option `5` to see:
 7. Export plan to take to gym: Menu → 3
 ```
 
-## Tips 💡
+## Tips
 
 - **First time?** Just follow the prompts - the program guides you through everything
 - **Need a reminder?** Your profile is automatically saved and loads when you restart
@@ -137,5 +137,5 @@ Standing calf raises (20 reps x 2 sets)
 
 ---
 
-**Ready to start your fitness journey? Run `python3 gym.py` now!** 💪
+**Ready to start your fitness journey? Run `python3 gym.py` now!**
 

@@ -352,7 +352,7 @@ class GymWorkoutPlanner:
         self.workout_plan = WorkoutCalculator.generate_workout_plan(self.user)
         self.save_user_data()
         
-        print(f"\n{Colors.GREEN}{Colors.BOLD}✓ Profile created successfully!{Colors.END}")
+        print(f"\n{Colors.GREEN}{Colors.BOLD}Profile created successfully!{Colors.END}")
         input(f"\n{Colors.YELLOW}Press Enter to continue...{Colors.END}")
     
     def display_workout_plan(self):
@@ -420,7 +420,7 @@ class GymWorkoutPlanner:
                 f.write("Keep up the great work! Stay consistent and track your progress.\n")
                 f.write("=" * 80 + "\n")
             
-            print(f"\n{Colors.GREEN}{Colors.BOLD}✓ Workout plan exported successfully!{Colors.END}")
+            print(f"\n{Colors.GREEN}{Colors.BOLD}Workout plan exported successfully!{Colors.END}")
             print(f"{Colors.CYAN}File saved as: {filename}{Colors.END}")
         except Exception as e:
             print(f"\n{Colors.RED}Error exporting workout plan: {e}{Colors.END}")
@@ -454,7 +454,7 @@ class GymWorkoutPlanner:
                 self.user.progress_log.append(log_entry)
                 self.save_user_data()
                 
-                print(f"\n{Colors.GREEN}{Colors.BOLD}✓ Workout logged successfully!{Colors.END}")
+                print(f"\n{Colors.GREEN}{Colors.BOLD}Workout logged successfully!{Colors.END}")
                 print(f"{Colors.CYAN}Great job completing Day {day}!{Colors.END}")
             else:
                 print(f"\n{Colors.RED}Invalid day number{Colors.END}")

@@ -1,43 +1,43 @@
-# 🎉 Project Transformation Summary
+#  Project Transformation Summary
 
 ## What Was Created
 
 Your gym workout program has been transformed into a **professional, interactive platform** with both **GUI** and **Terminal** interfaces!
 
-## 📁 File Structure
+##  File Structure
 
 ```
 Gym-Workout-Planner/
-├── gym_gui.py          # ⭐ GUI Version (Recommended)
-├── gym.py              # 💻 Terminal Version
-├── readme.md           # 📖 Complete Documentation
-├── QUICKSTART.md       # 🚀 Quick Start Guide
-├── GUI_GUIDE.md        # 🖥️ GUI User Manual
-├── PROJECT_SUMMARY.md  # 📊 This File
-├── .gitignore          # 🔒 Git Configuration
-└── user_data.json      # 💾 Your Profile Data (auto-generated)
+├── gym_gui.py          #  GUI Version (Recommended)
+├── gym.py              #  Terminal Version
+├── readme.md           #  Complete Documentation
+├── QUICKSTART.md       #  Quick Start Guide
+├── GUI_GUIDE.md        #  GUI User Manual
+├── PROJECT_SUMMARY.md  #  This File
+├── .gitignore          #  Git Configuration
+└── user_data.json      #  Your Profile Data (auto-generated)
 ```
 
-## 🖥️ GUI Version Features
+##  GUI Version Features
 
 ### Main Window
 ```
 ╔════════════════════════════════════════════════════════════════╗
-║                  🏋️ Gym Workout Planner                       ║
+║                  Gym Workout Planner                       ║
 ║                  Welcome back, [Your Name]!                    ║
 ║                                                                ║
 ║  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       ║
-║  │   👤 Create  │  │  📋 View     │  │  💾 Export   │       ║
+║  │    Create  │  │   View     │  │   Export   │       ║
 ║  │    Profile   │  │   Workout    │  │   Workout    │       ║
 ║  └──────────────┘  └──────────────┘  └──────────────┘       ║
 ║                                                                ║
 ║  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       ║
-║  │   ✓ Log      │  │  📊 View     │  │  ℹ️ About    │       ║
+║  │    Log      │  │   View     │  │   About    │       ║
 ║  │   Workout    │  │   Progress   │  │              │       ║
 ║  └──────────────┘  └──────────────┘  └──────────────┘       ║
 ║                                                                ║
 ║                     ┌──────────────┐                          ║
-║                     │   ❌ Exit    │                          ║
+║                     │    Exit    │                          ║
 ║                     └──────────────┘                          ║
 ╚════════════════════════════════════════════════════════════════╝
 ```
@@ -58,7 +58,7 @@ Gym-Workout-Planner/
 ║  Training Days/Week:    [___] (1-7)                            ║
 ║                                                                ║
 ║              ┌──────────────┐  ┌──────────────┐               ║
-║              │  💾 Save     │  │  ❌ Cancel   │               ║
+║              │   Save     │  │   Cancel   │               ║
 ║              └──────────────┘  └──────────────┘               ║
 ╚════════════════════════════════════════════════════════════════╝
 ```
@@ -66,7 +66,7 @@ Gym-Workout-Planner/
 ### Workout Plan Display
 ```
 ╔════════════════════════════════════════════════════════════════╗
-║           🏋️ [Your Name]'s Personalized Workout Plan          ║
+║           [Your Name]'s Personalized Workout Plan          ║
 ║                                                                ║
 ║ ┌─ Profile Information ────────────────────────────────────┐  ║
 ║ │ Age: 28 years                                            │  ║
@@ -93,7 +93,7 @@ Gym-Workout-Planner/
 ╚════════════════════════════════════════════════════════════════╝
 ```
 
-## 💻 Terminal Version Features
+##  Terminal Version Features
 
 ### Main Menu
 ```
@@ -115,7 +115,7 @@ Main Menu:
 Enter your choice: _
 ```
 
-## 🎯 Key Features Comparison
+##  Key Features Comparison
 
 | Feature | GUI Version | Terminal Version |
 |---------|-------------|------------------|
@@ -125,11 +125,11 @@ Enter your choice: _
 | **Workout Display** | Scrollable window | Paginated text |
 | **Data Entry** | Dropdowns & buttons | Keyboard input |
 | **Colors** | Full color scheme | ANSI colors |
-| **Ease of Use** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Ease of Use** |  |  |
 | **Speed** | Click & go | Type & enter |
 | **Best For** | Visual users | Terminal enthusiasts |
 
-## ✨ What Makes It Special
+##  What Makes It Special
 
 ### 1. **Professional Code Architecture**
 - Object-oriented design
@@ -146,14 +146,14 @@ Enter your choice: _
 - **Export Options**: Take your plan anywhere
 
 ### 3. **Robust Features**
-- ✅ 6 different fitness goals
-- ✅ 10 workout categories
-- ✅ Age-adjusted intensity (60-110+ years)
-- ✅ Gender-specific workouts
-- ✅ 1-7 day training schedules
-- ✅ Progress tracking with notes
-- ✅ Export to text file
-- ✅ JSON data storage
+-  6 different fitness goals
+-  10 workout categories
+-  Age-adjusted intensity (60-110+ years)
+-  Gender-specific workouts
+-  1-7 day training schedules
+-  Progress tracking with notes
+-  Export to text file
+-  JSON data storage
 
 ### 4. **Documentation**
 - **readme.md**: Complete feature documentation
@@ -161,7 +161,7 @@ Enter your choice: _
 - **GUI_GUIDE.md**: Detailed GUI instructions
 - **PROJECT_SUMMARY.md**: This overview
 
-## 🚀 How to Run
+##  How to Run
 
 ### GUI Version (Recommended)
 ```bash
@@ -175,7 +175,7 @@ cd /Users/aryankumawat/Gym-Workout-Planner
 python3 gym.py
 ```
 
-## 📊 Statistics
+##  Statistics
 
 ### Code Quality
 - **Total Lines**: 1,200+ lines of Python
@@ -191,7 +191,7 @@ python3 gym.py
 - **Configuration**: 1 (.gitignore)
 - **Total**: 7 files + auto-generated data
 
-## 🎨 Design Principles
+##  Design Principles
 
 ### Color Scheme (GUI)
 - **Primary Green** (#4CAF50): Actions, headers
@@ -207,33 +207,33 @@ python3 gym.py
 - **Feedback**: Always confirm user actions
 - **Accessibility**: Large text, clear colors
 
-## 💡 Usage Examples
+##  Usage Examples
 
 ### Example 1: First-Time User
 1. Run `python3 gym_gui.py`
-2. Click "👤 Create Profile"
+2. Click " Create Profile"
 3. Fill in your information
-4. Click "💾 Save Profile"
-5. Click "📋 View Workout Plan"
+4. Click " Save Profile"
+5. Click " View Workout Plan"
 6. See your personalized plan!
 
 ### Example 2: Logging Progress
 1. Complete a workout at the gym
 2. Open the app
-3. Click "✓ Log Workout"
+3. Click " Log Workout"
 4. Select the day you completed
 5. Add notes about your performance
-6. Click "✓ Log Workout"
+6. Click " Log Workout"
 7. View your progress anytime!
 
 ### Example 3: Exporting for Gym
 1. Open the app
-2. Click "💾 Export Workout Plan"
+2. Click " Export Workout Plan"
 3. Choose where to save
 4. Take the file to the gym
 5. Follow your personalized plan!
 
-## 🔄 Data Flow
+##  Data Flow
 
 ```
 User Input → Profile Form → Validation → User Object
@@ -247,19 +247,19 @@ User Input → Profile Form → Validation → User Object
                                     JSON File (user_data.json)
 ```
 
-## 🎓 Learning Outcomes
+##  Learning Outcomes
 
 This project demonstrates:
-- ✅ GUI development with tkinter
-- ✅ Object-oriented programming
-- ✅ Data persistence with JSON
-- ✅ Input validation and error handling
-- ✅ User experience design
-- ✅ Code documentation
-- ✅ Software architecture
-- ✅ Multiple interface paradigms
+-  GUI development with tkinter
+-  Object-oriented programming
+-  Data persistence with JSON
+-  Input validation and error handling
+-  User experience design
+-  Code documentation
+-  Software architecture
+-  Multiple interface paradigms
 
-## 🌟 Future Enhancement Ideas
+##  Future Enhancement Ideas
 
 Potential additions (not implemented):
 - [ ] Custom workout creation
@@ -273,7 +273,7 @@ Potential additions (not implemented):
 - [ ] Achievement badges
 - [ ] Statistics graphs
 
-## 📱 System Requirements
+##  System Requirements
 
 ### Minimum
 - Python 3.6+
@@ -287,20 +287,20 @@ Potential additions (not implemented):
 - Mouse for GUI version
 - Terminal for CLI version
 
-## 🏆 Achievements Unlocked
+##  Achievements Unlocked
 
-✅ Professional GUI Application
-✅ Interactive Terminal Interface
-✅ Complete Documentation
-✅ Data Persistence System
-✅ Progress Tracking
-✅ Export Functionality
-✅ Clean Code Architecture
-✅ User-Friendly Design
-✅ Zero Linter Errors
-✅ Production Ready
+ Professional GUI Application
+ Interactive Terminal Interface
+ Complete Documentation
+ Data Persistence System
+ Progress Tracking
+ Export Functionality
+ Clean Code Architecture
+ User-Friendly Design
+ Zero Linter Errors
+ Production Ready
 
-## 📞 Support
+##  Support
 
 ### Getting Help
 1. Read the documentation
@@ -314,28 +314,28 @@ Potential additions (not implemented):
 - **Buttons not working**: Ensure window is focused
 - **Can't type**: Click in the field first
 
-## 🎯 Success Metrics
+##  Success Metrics
 
-- ✅ **Easy to Use**: Intuitive interface
-- ✅ **Feature Rich**: All original features + more
-- ✅ **Well Documented**: 4 comprehensive guides
-- ✅ **Professional**: Clean code, no errors
-- ✅ **Flexible**: Two interface options
-- ✅ **Reliable**: Data persistence, validation
-- ✅ **Scalable**: Easy to add features
-- ✅ **Maintainable**: Clear structure, documented
+-  **Easy to Use**: Intuitive interface
+-  **Feature Rich**: All original features + more
+-  **Well Documented**: 4 comprehensive guides
+-  **Professional**: Clean code, no errors
+-  **Flexible**: Two interface options
+-  **Reliable**: Data persistence, validation
+-  **Scalable**: Easy to add features
+-  **Maintainable**: Clear structure, documented
 
-## 🎊 Conclusion
+##  Conclusion
 
 Your gym workout program has been transformed from a simple script into a **professional, production-ready application** with:
 
-- 🖥️ **Beautiful GUI interface**
-- 💻 **Powerful terminal interface**
-- 📚 **Comprehensive documentation**
-- 💾 **Robust data management**
-- 📊 **Progress tracking**
-- 🎨 **Modern design**
-- 🔧 **Clean architecture**
+-  **Beautiful GUI interface**
+-  **Powerful terminal interface**
+-  **Comprehensive documentation**
+-  **Robust data management**
+-  **Progress tracking**
+-  **Modern design**
+-  **Clean architecture**
 
 **Both versions are fully functional and ready to use!**
 
@@ -343,7 +343,7 @@ Your gym workout program has been transformed from a simple script into a **prof
 
 **Ready to start your fitness journey?**
 
-Run: `python3 gym_gui.py` 🏋️💪
+Run: `python3 gym_gui.py` 
 
 **Author**: Aryan Kumawat
 **Version**: 2.0 (GUI Edition)

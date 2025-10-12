@@ -256,7 +256,7 @@ class GymWorkoutPlannerGUI:
     
     def __init__(self, root):
         self.root = root
-        self.root.title("🏋️ Gym Workout Planner")
+        self.root.title("Gym Workout Planner")
         self.root.geometry("900x700")
         self.root.resizable(True, True)
         
@@ -327,7 +327,7 @@ class GymWorkoutPlannerGUI:
         header_frame = ttk.Frame(main_container)
         header_frame.pack(fill=tk.X, pady=(0, 20))
         
-        title_label = ttk.Label(header_frame, text="🏋️ Gym Workout Planner", style='Title.TLabel')
+        title_label = ttk.Label(header_frame, text="Gym Workout Planner", style='Title.TLabel')
         title_label.pack()
         
         if self.user:
@@ -351,12 +351,12 @@ class GymWorkoutPlannerGUI:
         
         # Create buttons in a grid layout
         buttons = [
-            ("👤 Create/Update Profile", self.show_profile_form, 0, 0),
-            ("📋 View Workout Plan", self.show_workout_plan, 0, 1),
-            ("💾 Export Workout Plan", self.export_workout_plan, 0, 2),
-            ("✓ Log Workout", self.show_log_workout, 1, 0),
-            ("📊 View Progress", self.show_progress, 1, 1),
-            ("ℹ️ About", self.show_about, 1, 2),
+            ("Create/Update Profile", self.show_profile_form, 0, 0),
+            ("View Workout Plan", self.show_workout_plan, 0, 1),
+            ("Export Workout Plan", self.export_workout_plan, 0, 2),
+            ("Log Workout", self.show_log_workout, 1, 0),
+            ("View Progress", self.show_progress, 1, 1),
+            ("About", self.show_about, 1, 2),
         ]
         
         for text, command, row, col in buttons:
@@ -365,7 +365,7 @@ class GymWorkoutPlannerGUI:
             btn.grid(row=row, column=col, padx=10, pady=10, sticky='ew')
         
         # Exit button
-        exit_btn = ttk.Button(main_container, text="❌ Exit", command=self.root.quit,
+        exit_btn = ttk.Button(main_container, text="Exit", command=self.root.quit,
                             style='Secondary.TButton')
         exit_btn.pack(pady=10)
         
@@ -478,11 +478,11 @@ class GymWorkoutPlannerGUI:
             except ValueError:
                 messagebox.showerror("Error", "Please enter valid numbers for age and training days")
         
-        save_btn = ttk.Button(button_frame, text="💾 Save Profile", command=save_profile,
+        save_btn = ttk.Button(button_frame, text="Save Profile", command=save_profile,
                              style='Primary.TButton')
         save_btn.pack(side=tk.LEFT, padx=5)
         
-        cancel_btn = ttk.Button(button_frame, text="❌ Cancel", command=profile_window.destroy,
+        cancel_btn = ttk.Button(button_frame, text="Cancel", command=profile_window.destroy,
                                style='Secondary.TButton')
         cancel_btn.pack(side=tk.LEFT, padx=5)
     
@@ -504,7 +504,7 @@ class GymWorkoutPlannerGUI:
         
         # Header
         header = ttk.Label(main_frame, 
-                          text=f"🏋️ {self.user.name}'s Personalized Workout Plan",
+                          text=f"{self.user.name}'s Personalized Workout Plan",
                           style='Header.TLabel')
         header.pack(pady=10)
         
@@ -521,7 +521,7 @@ Training Days: {self.user.training_days} days per week
         
         age_reduction = WorkoutCalculator.calculate_age_reduction(self.user.age)
         if age_reduction > 0:
-            info_text += f"\n⚠️ Workouts adjusted by {age_reduction}% for age"
+            info_text += f"\nNote: Workouts adjusted by {age_reduction}% for age"
         
         info_label = ttk.Label(info_frame, text=info_text, font=('Helvetica', 10))
         info_label.pack()
@@ -651,7 +651,7 @@ Training Days: {self.user.training_days} days per week
         button_frame = ttk.Frame(main_frame)
         button_frame.pack(pady=20)
         
-        save_btn = ttk.Button(button_frame, text="✓ Log Workout", command=save_log,
+        save_btn = ttk.Button(button_frame, text="Log Workout", command=save_log,
                              style='Primary.TButton')
         save_btn.pack(side=tk.LEFT, padx=5)
         
@@ -674,7 +674,7 @@ Training Days: {self.user.training_days} days per week
         main_frame = ttk.Frame(progress_window, padding="10")
         main_frame.pack(fill=tk.BOTH, expand=True)
         
-        title = ttk.Label(main_frame, text="📊 Your Workout Progress", style='Header.TLabel')
+        title = ttk.Label(main_frame, text="Your Workout Progress", style='Header.TLabel')
         title.pack(pady=10)
         
         stats = ttk.Label(main_frame,

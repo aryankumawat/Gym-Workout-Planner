@@ -1,4 +1,4 @@
-# 🖥️ GUI Version User Guide
+# GUI Version User Guide
 
 ## Overview
 
@@ -18,32 +18,32 @@ A window will open with the main menu.
 When you launch the application, you'll see:
 
 ### Header
-- **Title**: "🏋️ Gym Workout Planner" in large, green text
+- **Title**: "Gym Workout Planner" in large, green text
 - **Welcome Message**: Shows your name if you have a profile, or a welcome message
 
 ### Main Menu Buttons (in a 3x2 grid)
 
 **Row 1:**
-1. **👤 Create/Update Profile** - Create or edit your profile
-2. **📋 View Workout Plan** - See your personalized workout plan
-3. **💾 Export Workout Plan** - Save your plan to a text file
+1. **Create/Update Profile** - Create or edit your profile
+2. **View Workout Plan** - See your personalized workout plan
+3. **Export Workout Plan** - Save your plan to a text file
 
 **Row 2:**
-4. **✓ Log Workout** - Mark a workout as completed
-5. **📊 View Progress** - See your workout history
-6. **ℹ️ About** - Learn about the application
+4. **Log Workout** - Mark a workout as completed
+5. **View Progress** - See your workout history
+6. **About** - Learn about the application
 
 **Bottom:**
-- **❌ Exit** - Close the application
+- **Exit** - Close the application
 
 ### Footer
 - Shows author information at the bottom
 
 ## Using Each Feature
 
-### 1️⃣ Create/Update Profile
+### 1. Create/Update Profile
 
-**Click the "👤 Create/Update Profile" button**
+**Click the "Create/Update Profile" button**
 
 A new window opens with a form containing:
 - **Name**: Text field for your name
@@ -59,12 +59,12 @@ A new window opens with a form containing:
 - **Training Days/Week**: Number selector (1-7)
 
 **Buttons:**
-- **💾 Save Profile**: Saves your information
-- **❌ Cancel**: Closes the window without saving
+- **Save Profile**: Saves your information
+- **Cancel**: Closes the window without saving
 
-### 2️⃣ View Workout Plan
+### 2. View Workout Plan
 
-**Click the "📋 View Workout Plan" button**
+**Click the "View Workout Plan" button**
 
 Opens a large window showing:
 - **Header**: Your name and "Personalized Workout Plan"
@@ -77,9 +77,9 @@ Opens a large window showing:
 **Button:**
 - **Close**: Returns to main menu
 
-### 3️⃣ Export Workout Plan
+### 3. Export Workout Plan
 
-**Click the "💾 Export Workout Plan" button**
+**Click the "Export Workout Plan" button**
 
 Opens a file save dialog:
 - Choose where to save the file
@@ -87,9 +87,9 @@ Opens a file save dialog:
 - Saves as a nicely formatted text file
 - Shows success message with file location
 
-### 4️⃣ Log Workout
+### 4. Log Workout
 
-**Click the "✓ Log Workout" button**
+**Click the "Log Workout" button**
 
 Opens a dialog window with:
 - **Day Selection**: Dropdown to choose which day you completed
@@ -99,12 +99,12 @@ Opens a dialog window with:
   - Track weights used, etc.
 
 **Buttons:**
-- **✓ Log Workout**: Saves the workout log
+- **Log Workout**: Saves the workout log
 - **Cancel**: Closes without saving
 
-### 5️⃣ View Progress
+### 5. View Progress
 
-**Click the "📊 View Progress" button**
+**Click the "View Progress" button**
 
 Opens a window showing:
 - **Total Workouts Completed**: Number at the top
@@ -116,9 +116,9 @@ Opens a window showing:
 **Button:**
 - **Close**: Returns to main menu
 
-### 6️⃣ About
+### 6. About
 
-**Click the "ℹ️ About" button**
+**Click the "About" button**
 
 Shows a popup with:
 - Application version
@@ -257,9 +257,9 @@ python3 -m tkinter
 - **Python**: 3.6 or higher
 - **Tkinter**: Included with Python
 - **Operating System**: 
-  - macOS ✅
-  - Windows ✅
-  - Linux ✅ (may need `python3-tk` package)
+- macOS
+- Windows
+- Linux (may need `python3-tk` package)
 
 ## Getting Help
 
@@ -280,5 +280,5 @@ If you encounter issues:
 
 ---
 
-**Enjoy your fitness journey with the GUI version!** 💪🖥️
+**Enjoy your fitness journey with the GUI version!**
 
