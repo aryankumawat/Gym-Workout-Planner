@@ -203,17 +203,5 @@ The program is built with a clean, object-oriented architecture:
 - Bent over rows
 - And more...
 
-## Contributing
-
-Feel free to fork this project and submit pull requests with improvements!
-
-### Ideas for Enhancement
-- Add custom workout creation
-- Include rest day recommendations
-- Add weight tracking
-- Include nutrition tips
-- Create workout reminders
-- Add exercise videos/images
-
 **Stay consistent, track your progress, and achieve your fitness goals!**
 
