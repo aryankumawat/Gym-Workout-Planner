@@ -215,20 +215,5 @@ Feel free to fork this project and submit pull requests with improvements!
 - Create workout reminders
 - Add exercise videos/images
 
-## Author
-
-**Aryan Kumawat**
-
-## License
-
-This project is available for personal and educational use.
-
-## Acknowledgments
-
-- Thanks to all fitness enthusiasts who inspired this project
-- Built with Python and passion for fitness
-
----
-
 **Stay consistent, track your progress, and achieve your fitness goals!**
 
