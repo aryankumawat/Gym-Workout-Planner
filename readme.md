@@ -2,8 +2,11 @@
 
 An interactive, personalized gym workout planning platform that creates customized training programs based on your age, gender, fitness goals, and training schedule.
 
+**NEW: Advanced Edition Available!** - Now includes weight tracking, statistics, rest day recommendations, and more! See [ADVANCED_FEATURES.md](ADVANCED_FEATURES.md) for details.
+
 ## Features
 
+### Core Features
 - **Personalized Workout Plans**: Get customized workout routines tailored to your specific goals
 - **User Profiles**: Save and load your personal information
 - **Progress Tracking**: Log your completed workouts and track your fitness journey
@@ -12,6 +15,13 @@ An interactive, personalized gym workout planning platform that creates customiz
 - **Beautiful Graphical Interface**: Modern GUI with buttons and forms
 - **Data Persistence**: Your profile and progress are automatically saved
 - **Two Versions**: Choose between GUI (graphical) or Terminal (command-line) interface
+
+### Advanced Features (NEW!)
+- **Weight Tracking**: Monitor your weight progress over time with trend analysis
+- **Statistics & Analytics**: View workout streaks, averages, and performance metrics
+- **Rest Day Recommendations**: Get intelligent rest day suggestions based on your activity
+- **Custom Workouts**: Create your own personalized workout routines
+- **Workout Calendar**: Visual 4-week workout planning and scheduling
 
 ## Workout Goals
 
@@ -50,11 +60,17 @@ python3 gym_gui.py
 python3 gym.py
 ```
 
+**Advanced Version (NEW - with statistics, weight tracking, rest recommendations):**
+```bash
+python3 gym_advanced.py
+```
+
 Or make them executable:
 ```bash
-chmod +x gym_gui.py gym.py
-./gym_gui.py  # GUI version
-./gym.py      # Terminal version
+chmod +x gym_gui.py gym.py gym_advanced.py
+./gym_gui.py      # GUI version
+./gym.py          # Terminal version
+./gym_advanced.py # Advanced features
 ```
 
 ## How to Use
