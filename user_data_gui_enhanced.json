@@ -1,0 +1,12 @@
+{
+  "name": "Aryan",
+  "age": 21,
+  "gender": "male",
+  "goal": 5,
+  "training_days": 3,
+  "progress_log": [],
+  "custom_workouts": [],
+  "weight_log": [],
+  "rest_days": [],
+  "workout_calendar": {}
+}

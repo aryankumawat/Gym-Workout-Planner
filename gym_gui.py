@@ -40,6 +40,11 @@ class EnhancedGymWorkoutPlannerGUI:
         self.root.geometry("1000x750")
         self.root.resizable(True, True)
         
+        # Performance optimizations
+        self.root.configure(bg="#f5f5f5")
+        self._cache = {}  # Cache for expensive operations
+        self._last_refresh = 0  # Throttle refresh operations
+        
         # Color scheme - Modern and professional
         self.bg_color = "#f5f5f5"
         self.primary_color = "#4CAF50"
@@ -109,7 +114,14 @@ class EnhancedGymWorkoutPlannerGUI:
     
     def create_main_window(self):
         """Create the enhanced main window with tabs"""
-        # Clear window
+        # Throttle refresh operations to prevent lag
+        import time
+        current_time = time.time()
+        if current_time - self._last_refresh < 0.1:  # 100ms throttle
+            return
+        self._last_refresh = current_time
+        
+        # Clear window efficiently
         for widget in self.root.winfo_children():
             widget.destroy()
         
@@ -181,7 +193,7 @@ class EnhancedGymWorkoutPlannerGUI:
                  foreground='gray').pack(side=tk.RIGHT)
     
     def create_workout_tab(self, parent):
-        """Create workout plan tab"""
+        """Create workout plan tab with performance optimizations"""
         if not self.user or not self.workout_plan:
             ttk.Label(parent, text="Create a profile first to view your workout plan",
                      font=('Helvetica', 12)).pack(pady=50)
@@ -190,15 +202,18 @@ class EnhancedGymWorkoutPlannerGUI:
                       style='Primary.TButton').pack()
             return
         
-        # Profile summary
+        # Profile summary - cached for performance
+        cache_key = f"profile_summary_{self.user.name}_{self.user.age}_{self.user.goal}"
+        if cache_key not in self._cache:
+            summary_text = f"Age: {self.user.age} | Gender: {self.user.gender.capitalize()} | "
+            summary_text += f"Goal: {WorkoutDatabase.GOAL_NAMES[self.user.goal - 1]} | "
+            summary_text += f"Training Days: {self.user.training_days}/week"
+            self._cache[cache_key] = summary_text
+        
         summary_frame = ttk.LabelFrame(parent, text="Profile Summary", padding="10")
         summary_frame.pack(fill=tk.X, pady=(0, 10))
         
-        summary_text = f"Age: {self.user.age} | Gender: {self.user.gender.capitalize()} | "
-        summary_text += f"Goal: {WorkoutDatabase.GOAL_NAMES[self.user.goal - 1]} | "
-        summary_text += f"Training Days: {self.user.training_days}/week"
-        
-        ttk.Label(summary_frame, text=summary_text, font=('Helvetica', 10)).pack()
+        ttk.Label(summary_frame, text=self._cache[cache_key], font=('Helvetica', 10)).pack()
         
         age_reduction = WorkoutCalculator.calculate_age_reduction(self.user.age)
         if age_reduction > 0:
@@ -206,32 +221,41 @@ class EnhancedGymWorkoutPlannerGUI:
                      text=f"Note: Workouts adjusted by {age_reduction}% for age",
                      foreground='orange').pack()
         
-        # Workout plan display
+        # Workout plan display - optimized text widget
         plan_frame = ttk.LabelFrame(parent, text="Your Weekly Workout Plan", padding="10")
         plan_frame.pack(fill=tk.BOTH, expand=True)
         
         workout_text = scrolledtext.ScrolledText(plan_frame, wrap=tk.WORD,
-                                                 font=('Courier', 10),
-                                                 height=20)
-        workout_text.pack(fill=tk.BOTH, expand=True)
+                                                 font=('Courier', 9),  # Smaller font for better performance
+                                                 height=20,
+                                                 state='normal')  # Start in normal state
         
+        # Build workout text efficiently
+        workout_content = []
         for day_plan in self.workout_plan:
-            workout_text.insert(tk.END, f"\n{'='*70}\n")
-            workout_text.insert(tk.END, f"DAY {day_plan['day']}\n")
-            workout_text.insert(tk.END, f"{'='*70}\n")
-            workout_text.insert(tk.END, day_plan['workout'] + "\n")
+            workout_content.append(f"\n{'='*70}\n")
+            workout_content.append(f"DAY {day_plan['day']}\n")
+            workout_content.append(f"{'='*70}\n")
+            workout_content.append(day_plan['workout'] + "\n")
         
+        # Insert all at once for better performance
+        workout_text.insert(tk.END, ''.join(workout_content))
         workout_text.config(state='disabled')
+        workout_text.pack(fill=tk.BOTH, expand=True)
     
     def create_stats_tab(self, parent):
-        """Create statistics and analytics tab"""
+        """Create statistics and analytics tab with performance optimizations"""
         if not self.user:
             ttk.Label(parent, text="Create a profile first",
                      font=('Helvetica', 12)).pack(pady=50)
             return
         
-        # Statistics display
-        stats = WorkoutStatistics.get_statistics(self.user)
+        # Cache statistics calculation
+        cache_key = f"stats_{len(self.user.progress_log)}_{self.user.name}"
+        if cache_key not in self._cache:
+            self._cache[cache_key] = WorkoutStatistics.get_statistics(self.user)
+        
+        stats = self._cache[cache_key]
         
         if 'error' in stats:
             ttk.Label(parent, text="Complete some workouts to see statistics!",
@@ -246,7 +270,7 @@ class EnhancedGymWorkoutPlannerGUI:
         for i in range(3):
             stats_container.columnconfigure(i, weight=1)
         
-        # Stat cards
+        # Stat cards - pre-calculate data
         stats_data = [
             ("Total Workouts", stats['total_workouts'], self.primary_color),
             ("Current Streak", f"{stats['current_streak']} days", self.secondary_color),
@@ -265,23 +289,27 @@ class EnhancedGymWorkoutPlannerGUI:
                 col = 0
                 row += 1
         
-        # Recent activity
+        # Recent activity - optimized
         recent_frame = ttk.LabelFrame(parent, text="Recent Activity", padding="10")
         recent_frame.pack(fill=tk.BOTH, expand=True, pady=(10, 0))
         
         if self.user.progress_log:
             recent_text = scrolledtext.ScrolledText(recent_frame, wrap=tk.WORD,
-                                                   font=('Helvetica', 10),
-                                                   height=8)
-            recent_text.pack(fill=tk.BOTH, expand=True)
+                                                   font=('Helvetica', 9),  # Smaller font
+                                                   height=8,
+                                                   state='normal')
             
+            # Build recent activity text efficiently
+            recent_entries = []
             for i, log in enumerate(reversed(self.user.progress_log[-10:]), 1):
-                recent_text.insert(tk.END, f"{i}. {log['date']} - Day {log['day']}")
+                entry = f"{i}. {log['date']} - Day {log['day']}"
                 if log.get('notes'):
-                    recent_text.insert(tk.END, f" - {log['notes']}")
-                recent_text.insert(tk.END, "\n")
+                    entry += f" - {log['notes']}"
+                recent_entries.append(entry + "\n")
             
+            recent_text.insert(tk.END, ''.join(recent_entries))
             recent_text.config(state='disabled')
+            recent_text.pack(fill=tk.BOTH, expand=True)
     
     def create_stat_card(self, parent, title, value, color, row, col):
         """Create a statistic display card"""
@@ -328,6 +356,8 @@ class EnhancedGymWorkoutPlannerGUI:
                 weight = float(weight_entry.get())
                 WeightTracker.add_weight_entry(self.user, weight, unit_var.get())
                 self.save_user_data()
+                # Clear cache to force refresh
+                self._cache.clear()
                 messagebox.showinfo("Success", "Weight entry added!")
                 weight_entry.delete(0, tk.END)
                 self.create_main_window()  # Refresh
@@ -513,6 +543,8 @@ Weight Entries: {len(self.user.weight_log)}
                 self.workout_plan = WorkoutCalculator.generate_workout_plan(self.user)
                 self.save_user_data()
                 
+                # Clear cache to force refresh
+                self._cache.clear()
                 messagebox.showinfo("Success", "Profile saved successfully!")
                 form_window.destroy()
                 self.create_main_window()
@@ -568,6 +600,8 @@ Weight Entries: {len(self.user.weight_log)}
             self.user.progress_log.append(log_entry)
             self.save_user_data()
             
+            # Clear cache to force refresh
+            self._cache.clear()
             messagebox.showinfo("Success", f"Great job completing Day {day}!")
             log_window.destroy()
             self.create_main_window()
